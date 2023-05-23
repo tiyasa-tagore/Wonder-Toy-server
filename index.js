@@ -45,10 +45,10 @@ async function run() {
         res.send(result);
     });
 
-    app.post("/cars", async(req, res) => {
-        const adding= req.body;
-        console.log(adding);
-        const result = await allToysCollection.insertOne(adding);
+    app.post('/cars', async (req, res) => {
+        const booking = req.body;
+        console.log(booking);
+        const result = await allToysCollection.insertOne(booking);
         res.send(result);
     });
     // // Send a ping to confirm a successful connection
