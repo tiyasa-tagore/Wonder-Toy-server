@@ -44,6 +44,13 @@ async function run() {
         const result = await allToysCollection.findOne(query);
         res.send(result);
     });
+
+    app.post("/cars", async(req, res) => {
+        const adding= req.body;
+        console.log(adding);
+        const result = await allToysCollection.insertOne(adding);
+        res.send(result);
+    });
     // // Send a ping to confirm a successful connection
     await client.db
     ("admin").command({ ping: 1 });
